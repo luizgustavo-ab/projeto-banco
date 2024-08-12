@@ -630,7 +630,7 @@ void excluircontacorrente(){//exclui contas correntes
 
     FILE *temparqcc = fopen("temp_contascc.txt", "w+b");
     if (temparqcc == NULL) {
-        printf("ERRO AO CRIAR ARQUIVO TEMPOR¡RIO\n");
+        printf("ERRO AO CRIAR ARQUIVO TEMPOR√ÅRIO\n");
         fclose(arqcc);
         system("pause");
         return;
@@ -688,7 +688,7 @@ void excluircontapoupanca(){//exclui contas poupancas
 
     FILE *temparqcp = fopen("temp_contascp.txt", "w+b");
     if (temparqcp == NULL) {
-        printf("ERRO AO CRIAR ARQUIVO TEMPOR¡RIO\n");
+        printf("ERRO AO CRIAR ARQUIVO TEMPOR√ÅRIO\n");
         fclose(arqcp);
         system("pause");
         return;
@@ -763,7 +763,7 @@ void alterartipocontacp() { // altera conta poupanca para corrente
     }
 
     if (!found) {
-        printf("Conta n„o encontrada.\n");
+        printf("Conta n√£o encontrada.\n");
         fclose(arqcc);
         fclose(arqcp);
         return;
@@ -790,7 +790,7 @@ void alterartipocontacp() { // altera conta poupanca para corrente
     arqcp = fopen("contascp.txt", "r+b");
     FILE *tempArqcp = fopen("temp_contascp.txt", "w+b");
     if (tempArqcp == NULL) {
-        printf("ERRO AO CRIAR ARQUIVO TEMPOR¡RIO\n");
+        printf("ERRO AO CRIAR ARQUIVO TEMPOR√ÅRIO\n");
         fclose(arqcp);
         return;
     }
@@ -847,7 +847,7 @@ void alterardadoscontacp(){//altera dados da conta poupanca
     }
 
 	if(!found){
-        printf("Conta n„o encontrada.\n");
+        printf("Conta n√£o encontrada.\n");
         fclose(arqcp);
         system("pause");
         return;
@@ -924,7 +924,7 @@ void alterardadoscontacc(){//altera os dados das contas correntes
     }
 
 	if(!found){
-        printf("Conta n„o encontrada.\n");
+        printf("Conta n√£o encontrada.\n");
         fclose(arqcc);
         system("pause");
         return;
@@ -1007,7 +1007,7 @@ void alterartipocontacc() {
     }
 
     if (!found) {
-        printf("Conta n„o encontrada.\n");
+        printf("Conta n√£o encontrada.\n");
         fclose(arqcc);
         fclose(arqcp);
         return;
@@ -1034,7 +1034,7 @@ void alterartipocontacc() {
     arqcc = fopen("contascc.txt", "r+b");
     temparqcc = fopen("temp_contascc.txt", "w+b");
     if (temparqcc == NULL) {
-        printf("ERRO AO CRIAR ARQUIVO TEMPOR¡RIO\n");
+        printf("ERRO AO CRIAR ARQUIVO TEMPOR√ÅRIO\n");
         fclose(arqcc);
         return;
     }
@@ -1093,7 +1093,7 @@ void alterarclientecc(){//altera os dados dos clientes
     }
     
     if(!found){
-        printf("Conta n„o encontrada.\n");
+        printf("Conta n√£o encontrada.\n");
         fclose(arqcc);
         system("pause");
         return;
@@ -1187,7 +1187,7 @@ void alterarclientecp(){//altera os dados dos clientes
     }
     
     if(!found){
-        printf("Conta n„o encontrada.\n");
+        printf("Conta n√£o encontrada.\n");
         fclose(arqcp);
         system("pause");
         return;
@@ -1279,7 +1279,7 @@ void alterarfuncionario(){//altera os dados dos funcionarios
     }
 
 	if(!found){
-        printf("Conta n„o encontrada.\n");
+        printf("Conta n√£o encontrada.\n");
         fclose(arqfunc);
         system("pause");
         return;
@@ -1303,7 +1303,7 @@ void alterarfuncionario(){//altera os dados dos funcionarios
 	fgets(funcionario.telefone, 15 , stdin);
 	funcionario.telefone[strcspn(funcionario.telefone, "\n")] = '\0';
 	
-	printf("insira o endereÁo do funcionario: \n");
+	printf("insira o endere√ßo do funcionario: \n");
 	
 	printf("CEP: \n");
 	scanf("%d",&funcionario.endereco.cep);
@@ -2491,55 +2491,9 @@ void menuprincipal(){
 	}while(i!=3);
 }
 
-void logo(){
-	printf("                                                                                                   ...::JJYJ::...                                            \n");
-	printf("                                                                                               .~JPB##&&J&&&&J&&#BGPY~.                                      \n");
-	printf("                                                                                           ^5#&&&&&&&&J&&&&J&&&&&&&&#5^                                      \n");
-	printf("                                                                                          :P&&&&&&&&&&&J#&&&J&&&&&&&&&&&P:                                   \n");
-	printf("                                                                                         ~#&&&&&&&&&&&&J#&&#J&&&&&&&&&&&&&!                                  \n");
-	printf("                                                                                         ~&&&&&&&&&&&&&&J#&&#J&&&&&&&&&&&&&&~                                \n");
-	printf("                                                                                        .#&&&&&&&&&&&&&&Y#&&#Y&&&&&&&&&&&&&&#.                               \n");
-	printf("                                                                                        !&&&&&&&&&&&&&&&Y#&&#Y&&&&&&&&&&&&&&&!                               \n");
-	printf("                                                                                        Y&&&&&&&&&&&&&&&Y#&&#Y&&&&&&&&&&&&&&&5                               \n");
-	printf("                                                                                        B&&&&&&&&&&&&&&&Y#&&#Y&&&&&&&&&&&&&&&B                               \n");
-	printf("                                                                                       :&&&&&&&&&&&&&&&&Y#&&#Y&&&&&&&&&&&&&&&&:                              \n");
-	printf("                                                                                       7&&&&&&&&&&&&&&&&5#&&#5&&&&&&&&&&&&&&&&?                              \n");
-	printf("                                                                                       G&&&&&#BBGBB##&&&#&&&&#&&&&#BBGGB#&&&&&G                              \n");
-	printf("                                                                                     .P&&#GPPPGBBBGPPG#&&&&&&&&#GPPGGBGGPPPG#&&P.                            \n");
-	printf("                                                                                    !#&&#B##BB#P5PB&&&&&&&&&&&&&&&&BP5P#BB####&&#7                           \n");
-	printf("                                                                                  .P&&&&&GJYGG^    .7B&&&&&&&&&&G7.    ^GGYJG&&&&&P.                         \n");
-	printf("                                                                                 ~#&&&&B75#&B.        ~G&&&&&&G~        .G&#57G&&&&#!                        \n");
-	printf("                                                                                Y&&&&&Y7#&&&#5?~:.     J5B##B5J     ..^?5#&&&#?Y&&&&&Y.                      \n");
-	printf("                                                                              .G&&&&&?J&&&&&&GG##BGPP5P#&G55G&#P5PPGB##BG&&&&&&Y?&&&&&G.                     \n");
-	printf("                                                                             .G&&&&&7Y&&&&&&&&B55555PB#&&B55B&&#BGP555PB&&&&&&&&5?&&&&&B.                    \n");
-	printf("                                                                            .G&&&&&JJ&&&&&&&&BGGPPPPGPG&&&&&&&&GGGGPPPBGB&&&&&&&&JJ&&&&&G.                   \n");
-	printf("                                                                            5&&&&&Y7&&&&&&&&&&#GB##PJ?Y#&#PP#&#Y?JP##BB#&&&&&&&&&&7Y&&&&&P                   \n");
-	printf("                                                                          Y&&&&&G^&&&&&&&&&#&&&&&J5#&&&&^  ^&&&&#5J&&&&&#&&&&&&&&&~P&&&&&J                   \n");
-	printf("                                                                         !&&&&&#^B&&&&&&&&&GG&&&YP&&&&G! ^^ !G&&&&PY&&&GG&&&&&&&&&B^#&&&&&!                  \n");
-	printf("                                                                         .B&&&&&7?&&&&&&&&&&&?B&#5&&&P~!J.&#.?!~P&&&5#&B?&&&&&&&&&&&?7&&&&&#.                \n");
-	printf("                                                                          ^G&&&#~&&#BGP5YYYYPB~#&&&P7! #G.##.G# !7P&&&#~BPYYYY5PGB#&&^B&&&G^                 \n");
-	printf("                                                                            !B&J^7^..        PJ~#5: BG BG.##.GB GB :5#~JP        ..:!^J&B!                   \n");
-	printf("                                                                              !:             .G~~.:^YJ^YJ^YY^JY^?Y^: ~~G.             :!.                    \n");
-	printf("                                                                                              ....^J5PGPPPPPPPPGP5?: ...                                     \n");
-	printf("                                                                                                    .~JG#&&&&#GJ~.                                           \n");
-	printf("                                                                                                        .^J?^.                                               \n");
-	printf("_________________________________________________________________________________________________________________________________________________________________________________________________________________\n");
-	printf("                                    |||\xDB\xDB||||||||||||||\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\n");
-	printf("                                    |||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||\xDB\xDB\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||||\xDB\xDB|||||\n");
-	printf("                                    |||\xDB\xDB||||\xDB\xDB\xDB\xDB\xDB\xDB||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||||\xDB\xDB|||||\n");
-	printf("                                    |||\xDB\xDB|||||\xDB\xDB\xDB\xDB|||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||||\xDB\xDB|||||\n");
-	printf("                                    |||\xDB\xDB||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\n");
-	printf("                                    |||\xDB\xDB||||||||||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||||\n");
-	printf("                                    |||\xDB\xDB||||||||||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB\xDB\xDB||\xDB\xDB\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||||\n");
-	printf("                                    |||\xDB\xDB||||||||||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB|||||||||||||||\xDB\xDB\xDB\xDB\xDB\xDB|||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB||||\xDB\xDB\xDB\xDB|||||\xDB\xDB|||||||||||||\xDB\xDB||||||\xDB\xDB|||||||\n");
-	printf("                                    |||\xDB\xDB||||||||||||||\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||||||\xDB\xDB|||||||||\xDB\xDB||||||\xDB\xDB|||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||||\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB|||||\xDB\xDB||||||\xDB\xDB\xDB\xDB\xDB\xDB|||\n");
-	printf("_________________________________________________________________________________________________________________________________________________________________________________________________________________");
-}
-
 int main(){
-	logo();
-	system("pause");
+	
 	menuprincipal();
-
+	
 return 0;
 }
